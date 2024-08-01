@@ -16,4 +16,8 @@ jobs:
       - name: Build Docker Contianer  
         run: docker build -t app-go . 
 
+      - name: login to docker hub
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }}| docker login -u ahmedshams8 --pasword-stdin
 
+      - name: push the image to docker hub 
+        run : docker push ahmedshams8/app-go:latest 
