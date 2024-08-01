@@ -2,10 +2,13 @@ name: Build and Push App to DockerHub
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu:latest  
+    runs-on: ubuntu-latest  
+    
     steps:
       - name: Copy my code to github machine 
         uses: actions/checkout@v4 
