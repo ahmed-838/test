@@ -3,12 +3,12 @@ name: Build and Push App to DockerHub
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest  
-    
+
     steps:
       - name: Copy my code to github machine 
         uses: actions/checkout@v4 
